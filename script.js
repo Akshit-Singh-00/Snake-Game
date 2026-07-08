@@ -4,6 +4,8 @@ const blockWidth = 50;
 const cols = Math.floor(board.clientWidth / blockHeight);
 const rows = Math.floor(board.clientHeight / blockHeight);
 
+let intervalId=null;
+
 const blocks={};
 const snake=[{
     x:1,y:3
@@ -48,6 +50,10 @@ setInterval(() => {
     }
     else if(direction=="up"){
         head={x:snake[0].x-1,y:snake[0].y}
+    }
+
+    if(head.x<0 || head.x>=rows || head.y<0 || head.y>=cols){
+       alert("game Over")
     }
 
     snake.forEach(segment=>{
