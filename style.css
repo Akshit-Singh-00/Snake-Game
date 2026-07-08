@@ -14,6 +14,8 @@ body {
     /* Background Color */
     --bg-primary-color: #0c0c0c;
 
+    --bg-fill-color:#fdfdfc;
+
     /* Text Color */
     --text-primary-color: #f0f0f0;
 
@@ -89,3 +91,8 @@ section .infos {
     border: 1px solid var(--border-primary-color);
 
 }
+
+.fill{
+    background-color: var(--bg-fill-color);
+}
+
